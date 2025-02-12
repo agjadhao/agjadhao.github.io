@@ -1,5 +1,61 @@
-Follow the below steps to delete an account in the Application:-
-1.Login to your account.
-2.Go to settings (Upper right corner).
-3.Go to My Account option.
-4.Click on the "Delete Account" button (Center bottom). After clicking "Yes" on the popup, all Application data will be deleted permanently.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account Instructions</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            color: red;
+        }
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Account Instructions</h1>
+        <p>Follow the below steps to delete an account in the Application:</p>
+        <ol>
+            <li>Login to your account.</li>
+            <li>Go to settings (Upper right corner).</li>
+            <li>Go to My Account option.</li>
+            <li>Click on the "Delete Account" button (Center bottom).</li>
+            <li>After clicking "Yes" on the popup, all Application data will be deleted permanently.</li>
+        </ol>
+    </div>
+    <script>
+        document.addEventListener("mousemove", function(event) {
+            let circle = document.createElement("div");
+            circle.classList.add("circle");
+            document.body.appendChild(circle);
+            circle.style.left = `${event.clientX}px`;
+            circle.style.top = `${event.clientY}px`;
+            setTimeout(() => {
+                circle.remove();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
